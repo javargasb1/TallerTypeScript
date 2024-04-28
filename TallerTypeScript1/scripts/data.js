@@ -1,4 +1,4 @@
-import { Serie } from "./Serie";
+import { Serie } from "./serie.js";
 export var series = [
     new Serie(1, "Breaking Bad", "AMC", 5),
     new Serie(2, "Orange Is the New Black", "Netflix", 6),
