@@ -1,10 +1,10 @@
 
-import { Serie } from './serie.js';
+import { Serie } from "./serie.js";
 
-import { series } from './data.js';
+import { series } from "./data.js";
 
-let seriesTbody: HTMLElement = document.getElementById('series')!;
-const seriesAverage: HTMLElement = document.getElementById("average")!;
+let seriesTbody: HTMLElement = document.getElementById("series")!;
+const seriesPromedio: HTMLElement = document.getElementById("promedio")!;
 renderSeriesInTable(series);
 calcularPromedioTemporadas(series);
 function renderSeriesInTable(series: Serie[]): void {
@@ -25,5 +25,5 @@ function calcularPromedioTemporadas(listadoSeries: Serie[]): void {
     acumuladoTemporadas += serie.seasons;
   });
   const promedioTemporadas = Math.round(acumuladoTemporadas / listadoSeries.length);
-  seriesAverage.textContent = `Average Seasons: ${promedioTemporadas}`;
+  seriesPromedio.textContent = `Average Seasons: ${promedioTemporadas}`;
 }

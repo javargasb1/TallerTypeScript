@@ -1,6 +1,6 @@
-import { series } from './data.js';
-var seriesTbody = document.getElementById('series');
-var seriesAverage = document.getElementById("average");
+import { series } from "./data.js";
+var seriesTbody = document.getElementById("series");
+var seriesPromedio = document.getElementById("promedio");
 renderSeriesInTable(series);
 calcularPromedioTemporadas(series);
 function renderSeriesInTable(series) {
@@ -17,5 +17,5 @@ function calcularPromedioTemporadas(listadoSeries) {
         acumuladoTemporadas += serie.seasons;
     });
     var promedioTemporadas = Math.round(acumuladoTemporadas / listadoSeries.length);
-    seriesAverage.textContent = "Average Seasons: ".concat(promedioTemporadas);
+    seriesPromedio.textContent = "Average Seasons: ".concat(promedioTemporadas);
 }
